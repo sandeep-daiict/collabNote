@@ -1,0 +1,140 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="0dp"
+    android:padding="0dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbars="horizontal" >
+
+    <com.example.server.CanvasSurface
+        android:id="@+id/canvas_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginBottom="50dp" 
+        />
+    
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:fitsSystemWindows="true"
+        android:padding="0dp" >
+
+	  <LinearLayout
+	        android:id="@+id/fullscreen_content_controls"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="bottom"
+	        android:orientation="horizontal"
+	        android:scrollbars="horizontal" >
+	
+	        <ImageButton
+	            android:id="@+id/pb_rectangle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:onClick="action_pb_rect"
+	            android:src="@drawable/pb_rect"
+	            android:text="Button" />
+	
+	        <ImageButton
+	            android:id="@+id/pb_circle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:onClick="action_pb_circle"
+	            android:scaleType="center"
+	            android:src="@drawable/pb_circle"
+	            android:text="Button" />
+	
+	        <ImageButton
+	            android:id="@+id/pb_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:onClick="action_pb_text"
+	            android:src="@drawable/pb_text"
+	            android:text="Button" />
+	
+	        <ImageButton
+	            android:id="@+id/pb_line"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:onClick="action_pb_line"
+	            android:src="@drawable/pb_line"
+	            android:text="Button" />
+	        
+			<ImageButton
+			    android:id="@+id/pb_color"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:onClick="action_pb_color"
+			    android:src="@drawable/pb_color"
+			    android:text="Button" />
+			
+			<ImageButton
+			    android:id="@+id/pb_erase"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:onClick="action_pb_erase"
+			    android:src="@drawable/pb_eraser"
+			    android:text="Button" />
+			
+			<ImageButton
+			    android:id="@+id/pb_line_size"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:onClick="action_pb_line_size"
+			    android:src="@drawable/pb_line_size"
+			    android:text="Button" />
+	        
+			<ImageButton
+			    android:id="@+id/pb_text_size"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:onClick="action_pb_text_size"
+			    android:src="@drawable/pb_text_size"
+			    android:text="Button" />
+			
+						<ImageButton
+			    android:id="@+id/pb_note_add"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:onClick="action_pb_note_add"
+			    android:src="@drawable/addnotes"
+			    android:text="Button" />
+			
+			<ImageButton
+			    android:id="@+id/pb_note_view"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:onClick="action_pb_note_view"
+			    android:src="@drawable/viewnotes"
+			    android:text="Button" />
+			
+			<ImageButton 
+			    android:id="@+id/pb_canvas_save"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/pb_save"
+			    android:text="Button"
+			    android:onClick="action_pb_save"
+			    />
+			
+			<ImageButton 
+			    android:id="@+id/pb_action_clear"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Button"
+			    android:src="@drawable/pb_clear"
+			    android:onClick="action_pb_clear"
+			    />
+			
+			
+	    </LinearLayout>
+    
+    </HorizontalScrollView>
+
+</FrameLayout>

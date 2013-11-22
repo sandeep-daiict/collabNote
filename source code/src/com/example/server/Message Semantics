@@ -1,0 +1,120 @@
+1. GET_LIST_BROADCAST : Broadcast message asking for list of all running sessions 
+
+JSON : {
+			"t": 0,
+			"d" : {
+					"ip" : "10.2.4.5"  // ip of the sending host, response comes here
+				  }		 
+		}
+
+Object: 
+	MessageType type = GET_LIST_BROADCAST
+	data("ip") = "10.2.4.5" 
+
+2. JOIN_PERMISSION_ASK : Slave asking a Master to join a session
+JSON: {
+			"t" : 1,
+			"d" : {
+					"ip" : "10.2.4.5"	// ip of the sending host, response comes here
+				  }
+	  }
+
+Object:
+	MessageType type = JOIN_PERMISSION_ASK
+	data("ip") = "10.2.4.5"
+	
+3. JOIN_PERMISSION_RESPONSE: Response from a master to a slave asking to join a session
+JSON: {
+		"t" : 2,
+		"d" : {
+				"ans" : "y" / "n"	// answer to sent y-yes n-no 
+			  }
+	  }
+	  
+Object:
+	MessageType type = JOIN_PERMISSION_RESPONSE
+	data("ans") = "y" / "n" 
+
+
+4. CANVAS_EVENT_LINE : A canvas event on a host to draw a line
+JSON: {
+		"t" : 3,
+		"d" : {
+				"x1" : "22"			// Starting point x value
+				"y1" : "15"			// Starting point y value
+				"x2" : "10"			// Ending point x value
+				"y2" : "5"          // Ending point y value
+			 }
+	  }
+	  
+Object:
+	MessageType type = CANVAS_EVENT_LINE
+	data("x1") = "22"
+	data("y1") = "15"
+	data("x2") = "10"
+	data("y2") = "5"
+	
+5. CANVAS_EVENT_CIRCLE : A canvas event on host to draw a circle
+	JSON: {
+		"t" : 4,
+		"d" : {
+				"x" : "22"			// Center x coordinate
+				"y" : "15"			// Center y coordinate
+				"r" : "33"			// radius
+			 }
+	  }	
+
+Object:
+	MessageType type = CANVAS_EVENT_CIRCLE
+	data("x") = "22"
+	data("y") = "15"
+	data("r") = "33"
+
+
+6. CANVAS_EVENT_RECT : A canvas event on a host to draw a rectangle
+JSON: {
+		"t" : 5,
+		"d" : {
+				"x1" : "22"			// Upper right point x value
+				"y1" : "15"			// Upper right point y value
+				"x2" : "10"			// Lower left point x value
+				"y2" : "5"          // Lower left point y value
+			 }
+	  }
+	  
+Object:
+	MessageType type = CANVAS_EVENT_RECT
+	data("x1") = "22"
+	data("y1") = "15"
+	data("x2") = "10"
+	data("y2") = "5"
+
+7. CANVAS_EVENT_TEXT :  A canvas event to draw a text box
+JSON: {
+		"t" : 6,
+		"d" : {
+				"x" : "22"			// Upper right point x value
+				"y" : "15"			// Upper right point y value
+				"text" : "qwerty"	// the text to be written
+			 }
+	  }
+	  
+Object:
+	MessageType type = CANVAS_EVENT_TEXT
+	data("x") = "22"
+	data("y") = "15"
+	data("text") =  "qwerty"
+	
+8. CANVAS_EVENT_FREE
+JSON: {
+			"t" : 7,
+			"d" : {
+					"x" : "22,12,55,16"	// a comma separated list of all x values
+					"y" : "15,55,92,13" // a comma separated list of all y values
+				  }
+	  }
+
+Object:
+	MessageType type = CANVAS_EVENT_FREE
+	data("x") = "22,12,55,16"
+	data("y") = "15,55,92,13"
